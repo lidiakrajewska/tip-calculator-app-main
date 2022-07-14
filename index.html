@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="./images/logo.svg" alt="Splitter logo" />
+      </header>
+      <main>
+        <div class="card">
+          <div class="card__part card__part--light">
+            <form action="#">
+              <div class="row row--light">
+                <label for="bill">Bill</label>
+                <div class="input-wrapper">
+                  <img src="./images/icon-dollar.svg" alt="dollar icon" />
+                  <input type="text" name="bill" id="bill" />
+                </div>
+              </div>
+              <div class="row row--light">
+                <!--Group of invisible radio buttons?-->
+                Select Tip % 5% 10% 15% 25% 50%
+              </div>
+              <div class="row row--light">
+                <label for="people">Custom Number of People</label>
+                <div class="input-wrapper">
+                  <img src="./images/icon-person.svg" alt="person icon" />
+                  <input type="text" name="people" id="people" />
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="card__part card__part--dark">
+            <div class="row row--dark">
+              <p class="text">
+                Tip Amount <br />
+                <span class="text--small">/ person</span>
+              </p>
+              <span class="number number--big" id="tip-amount"></span>
+            </div>
+            <div class="row row--dark">
+              <p class="text">
+                Total <br /><span class="text--small">/ person</span>
+              </p>
+              <span class="number number--big" id="total"></span>
+            </div>
+            <button class="button button--reset">Reset</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/lidiakrajewska"
+          >Lidia Krajewska</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

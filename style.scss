@@ -1,0 +1,59 @@
+$font: "Space Mono", monospace;
+$primary: hsl(172, 67%, 45%);
+$darkest: hsl(183, 100%, 15%);
+$dark: hsl(186, 14%, 43%);
+$grayish: hsl(184, 14%, 56%);
+$lighter: hsl(185, 41%, 84%);
+$lightest: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $lighter;
+  font-family: $font;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  width: Min(700px, 100%);
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  margin: 2rem 0;
+  background-color: $white;
+  border-radius: 25px;
+}
+
+.card__part--light {
+  padding: 1.5rem 0.5rem;
+}
+
+.card__part--dark {
+  padding: 1.5rem 1rem;
+  background-color: $darkest;
+  border-radius: 15px;
+}
+
+.text {
+  color: $lightest;
+}
+
+.text--small {
+  color: $grayish;
+}

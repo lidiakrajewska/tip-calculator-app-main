@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #c5e4e7;
+  font-family: "Space Mono", monospace;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.card {
+  width: Min(700px, 100%);
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  margin: 2rem 0;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.card__part--light {
+  padding: 1.5rem 0.5rem;
+}
+
+.card__part--dark {
+  padding: 1.5rem 1rem;
+  background-color: #00494d;
+  border-radius: 15px;
+}
+
+.text {
+  color: #f4fafa;
+}
+
+.text--small {
+  color: #7f9c9f;
+}
+/*# sourceMappingURL=style.css.map */
