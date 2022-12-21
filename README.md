@@ -11,7 +11,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -27,12 +26,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/screen-empty.png)
+![](./images/screen-filled.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/lidiakrajewska/tip-calculator-app-main](https://github.com/lidiakrajewska/tip-calculator-app-main)
+- Live Site URL: [https://lidiakrajewska.github.io/tip-calculator-app-main/](https://lidiakrajewska.github.io/tip-calculator-app-main/)
 
 ## My process
 
@@ -47,11 +47,14 @@ Users should be able to:
 
 ### What I learned
 
-margin: auto won't center an image, because it's an inline element
+- margin: auto won't center an image, because it's an inline element
+- location.reload() refreshes the page
+- there is focus and blur event listener
 
 ### Useful resources
 
 - [W3schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) - This helped me to make the arrows in numeric inputs invisible
+- [StackOverflow](https://stackoverflow.com/questions/149055/how-to-format-numbers-as-currency-strings) - I used this code to format displayed results in USD
 
 ## Author
 
