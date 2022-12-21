@@ -7,7 +7,9 @@ $lighter: hsl(185, 41%, 84%);
 $lightest: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
 
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,44 +18,220 @@ $white: hsl(0, 0%, 100%);
 body {
   background-color: $lighter;
   font-family: $font;
+  font-weight: 700;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.logo {
+  display: block;
+  margin: 2.8rem auto;
 }
 
 .card {
-  width: Min(700px, 100%);
+  width: Min(900px, 100%);
   padding: 1rem 1.5rem 2rem 1.5rem;
-  margin: 2rem 0;
+  margin: 2rem auto;
   background-color: $white;
   border-radius: 25px;
 }
 
+// Left side / top part of the card
 .card__part--light {
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0.5rem 2rem 0.5rem;
 }
 
+.row + .row {
+  margin-top: 2rem;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  color: $dark;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: $lightest;
+  padding: 0.3rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+}
+
+.input-font {
+  font-size: 1.5rem;
+  font-family: $font;
+  font-weight: 700;
+}
+
+.input--number {
+  width: 100%;
+  background: $lightest;
+  color: $darkest;
+  text-align: right;
+  border: none;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: $grayish;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  -moz-appearance: textfield;
+}
+
+.radio-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.radio-item {
+  padding: 0.4rem;
+  background-color: $darkest;
+  color: $white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.radio-item--custom {
+  background-color: $lightest;
+  color: $dark;
+}
+
+.input--radio {
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: $darkest;
+  background: $primary;
+  opacity: 1;
+}
+
+// Right side / bottom part of the card
 .card__part--dark {
-  padding: 1.5rem 1rem;
+  padding: 2.3rem 1.2rem 1.5rem 1.2rem;
   background-color: $darkest;
   border-radius: 15px;
 }
 
+.row--dark {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row--dark + .row--dark {
+  margin-top: 1.4rem;
+}
+
 .text {
+  font-size: 1rem;
   color: $lightest;
 }
 
 .text--small {
   color: $grayish;
+  font-size: 0.8rem;
+}
+
+.text--big {
+  font-size: 2.2rem;
+  color: $primary;
+}
+
+.button--reset {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: $darkest;
+  background: $primary;
+  opacity: 0.2;
+  border: none;
+  border-radius: 5px;
+}
+
+// Footer
+.attribution {
+  margin: 0.5rem;
+  font-size: 0.8rem;
+  color: $darkest;
+  text-align: center;
+  a {
+    color: $grayish;
+  }
+}
+
+// Media queries
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .card__part {
+    flex: 1 1;
+  }
+
+  .card__part + .card__part {
+    margin-left: 2.5rem;
+  }
+
+  .card__part--light {
+    padding: 0.5rem;
+  }
+
+  .radio-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card__part--dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem;
+  }
+
+  .row--dark + .row--dark {
+    margin-top: 2rem;
+  }
+
+  .text--big {
+    font-size: 3rem;
+  }
 }

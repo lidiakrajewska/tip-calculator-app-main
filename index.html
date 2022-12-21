@@ -23,48 +23,142 @@
   <body>
     <div class="wrapper">
       <header>
-        <img src="./images/logo.svg" alt="Splitter logo" />
+        <img src="./images/logo.svg" alt="Splitter logo" class="logo" />
       </header>
       <main>
         <div class="card">
           <div class="card__part card__part--light">
-            <form action="#">
+            <form>
               <div class="row row--light">
-                <label for="bill">Bill</label>
+                <label for="bill" class="label">Bill</label>
                 <div class="input-wrapper">
-                  <img src="./images/icon-dollar.svg" alt="dollar icon" />
-                  <input type="text" name="bill" id="bill" />
+                  <img
+                    src="./images/icon-dollar.svg"
+                    alt="dollar icon"
+                    class="icon"
+                  />
+                  <input
+                    type="number"
+                    name="bill"
+                    id="bill"
+                    class="input-font input--number"
+                    placeholder="0"
+                    min="0"
+                    step="0.01"
+                  />
                 </div>
               </div>
               <div class="row row--light">
-                <!--Group of invisible radio buttons?-->
-                Select Tip % 5% 10% 15% 25% 50%
+                <label for="tip-percent" class="label">Select Tip %</label>
+                <div class="radio-wrapper">
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      name="tip_percent"
+                      id="five"
+                      value="5"
+                      class="input input--radio"
+                    />
+                    <label for="five" class="input-font">5%</label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      name="tip_percent"
+                      id="ten"
+                      value="10"
+                      class="input input--radio"
+                    />
+                    <label for="ten" class="input-font">10%</label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      name="tip_percent"
+                      id="fifteen"
+                      value="15"
+                      class="input input--radio"
+                    />
+                    <label for="fifteen" class="input-font">15%</label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      name="tip_percent"
+                      id="twenty-five"
+                      value="25"
+                      class="input input--radio"
+                    />
+                    <label for="twenty-five" class="input-font">25%</label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      name="tip_percent"
+                      id="fifty"
+                      value="50"
+                      class="input input--radio"
+                    />
+                    <label for="fifty" class="input-font">50%</label>
+                  </div>
+
+                  <div class="radio-item radio-item--custom">
+                    <input
+                      type="radio"
+                      name="tip_percent"
+                      id="custom"
+                      value="custom"
+                      class="input input--radio"
+                    />
+                    <label for="custom" class="input-font">Custom</label>
+                  </div>
+                </div>
               </div>
               <div class="row row--light">
-                <label for="people">Custom Number of People</label>
+                <label for="people" class="label">Number of People</label>
                 <div class="input-wrapper">
-                  <img src="./images/icon-person.svg" alt="person icon" />
-                  <input type="text" name="people" id="people" />
+                  <img
+                    src="./images/icon-person.svg"
+                    alt="person icon"
+                    class="icon"
+                  />
+                  <input
+                    type="number"
+                    name="people"
+                    id="people"
+                    class="input-font input--number"
+                    placeholder="0"
+                    min="0"
+                    step="1"
+                  />
                 </div>
               </div>
             </form>
           </div>
 
           <div class="card__part card__part--dark">
-            <div class="row row--dark">
-              <p class="text">
-                Tip Amount <br />
-                <span class="text--small">/ person</span>
-              </p>
-              <span class="number number--big" id="tip-amount"></span>
+            <div class="row">
+              <div class="row--dark">
+                <p class="text">
+                  Tip Amount <br />
+                  <span class="text--small">/ person</span>
+                </p>
+                <span class="text--big" id="tip-amount">$0.00</span>
+              </div>
+              <div class="row--dark">
+                <p class="text">
+                  Total <br /><span class="text--small">/ person</span>
+                </p>
+                <span class="text--big" id="total">$0.00</span>
+              </div>
             </div>
             <div class="row row--dark">
-              <p class="text">
-                Total <br /><span class="text--small">/ person</span>
-              </p>
-              <span class="number number--big" id="total"></span>
+              <button class="button button--reset">Reset</button>
             </div>
-            <button class="button button--reset">Reset</button>
           </div>
         </div>
       </main>
