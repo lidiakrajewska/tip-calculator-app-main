@@ -56,10 +56,6 @@ body {
   border-radius: 5px;
 }
 
-.input-wrapper:hover {
-  border: #26c0ab 2px solid;
-}
-
 .input-font {
   font-size: 1.5rem;
   font-family: "Space Mono", monospace;
@@ -101,6 +97,25 @@ body {
   margin: 0;
 }
 
+.focused {
+  outline: 2px solid #26c0ab;
+}
+
+.unfocused {
+  outline: none;
+}
+
+.row--light {
+  position: relative;
+}
+
+.error-msg {
+  display: none;
+  position: absolute;
+  right: 0;
+  color: #e48a73;
+}
+
 .radio-wrapper {
   display: -ms-grid;
   display: grid;
@@ -126,15 +141,18 @@ body {
   color: #00494d;
 }
 
+.radio-item span {
+  pointer-events: none;
+}
+
 .radio-item--custom {
   background-color: #f4fafa;
   color: #5e7a7d;
 }
 
-.active {
-  color: #00494d;
-  background: #26c0ab;
-  opacity: 1;
+.radio-item--custom:hover, .radio-item--custom:focus {
+  background-color: #f4fafa;
+  outline: 2px solid #26c0ab;
 }
 
 .card__part--dark {
@@ -189,6 +207,22 @@ body {
   background-color: #9ae4dd;
   color: #00494d;
   opacity: 1;
+  cursor: pointer;
+}
+
+.active {
+  color: #00494d;
+  background: #26c0ab;
+  opacity: 1;
+}
+
+.active--custom {
+  color: #00494d;
+  outline: 2px solid #26c0ab;
+}
+
+.error {
+  outline: 2px solid #e48a73;
 }
 
 .attribution {

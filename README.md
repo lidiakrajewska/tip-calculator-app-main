@@ -49,14 +49,6 @@ Users should be able to:
 
 margin: auto won't center an image, because it's an inline element
 
-### Continued development
-
-- tip % buttons - just divs with data atribute with value?
-- desktop and tablet version
-- focus states on iputs onClick, the same with percent buttons
-- reset button styling in JS
-- checking for right values, error messages
-
 ### Useful resources
 
 - [W3schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) - This helped me to make the arrows in numeric inputs invisible

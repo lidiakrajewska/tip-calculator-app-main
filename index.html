@@ -49,7 +49,7 @@
                 </div>
               </div>
               <div class="row row--light">
-                <label for="tip-percent" class="label">Select Tip %</label>
+                <label for="custom-percent" class="label">Select Tip %</label>
                 <div class="radio-wrapper">
                   <div class="radio-item" data-percent="5">
                     <span class="input-font">5%</span>
@@ -70,13 +70,14 @@
                     type="number"
                     class="input-font input--number radio-item radio-item--custom"
                     placeholder="Custom"
-                    name="tip-percent"
-                    id="tip-percent"
+                    name="custom-percent"
+                    id="custom-percent"
                   />
                 </div>
               </div>
               <div class="row row--light">
                 <label for="people" class="label">Number of People</label>
+                <span class="error-msg">Can't be zero</span>
                 <div class="input-wrapper">
                   <img
                     src="./images/icon-person.svg"
@@ -132,5 +133,7 @@
         >.
       </p>
     </footer>
+
+    <script src="./app.js"></script>
   </body>
 </html>

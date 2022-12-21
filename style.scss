@@ -90,6 +90,25 @@ body {
   cursor: pointer;
 }
 
+.focused {
+  outline: 2px solid $primary;
+}
+
+.unfocused {
+  outline: none;
+}
+
+.row--light {
+  position: relative;
+}
+
+.error-msg {
+  display: none;
+  position: absolute;
+  right: 0;
+  color: rgb(228, 138, 115);
+}
+
 .radio-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -109,17 +128,19 @@ body {
     background-color: $hover;
     color: $darkest;
   }
+  span {
+    pointer-events: none;
+  }
 }
 
 .radio-item--custom {
   background-color: $lightest;
   color: $dark;
-}
-
-.active {
-  color: $darkest;
-  background: $primary;
-  opacity: 1;
+  &:hover,
+  &:focus {
+    background-color: $lightest;
+    outline: 2px solid $primary;
+  }
 }
 
 // Right side / bottom part of the card
@@ -169,7 +190,24 @@ body {
     background-color: $hover;
     color: $darkest;
     opacity: 1;
+    cursor: pointer;
   }
+}
+
+// State classes
+.active {
+  color: $darkest;
+  background: $primary;
+  opacity: 1;
+}
+
+.active--custom {
+  color: $darkest;
+  outline: 2px solid $primary;
+}
+
+.error {
+  outline: 2px solid rgb(228, 138, 115);
 }
 
 // Footer
