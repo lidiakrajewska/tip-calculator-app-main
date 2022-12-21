@@ -39,15 +39,11 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SASS
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JS ES6
 
 ### What I learned
 
@@ -55,12 +51,14 @@ margin: auto won't center an image, because it's an inline element
 
 ### Continued development
 
-- what about this group radio buttons of % tip?
+- tip % buttons - just divs with data atribute with value?
 - desktop and tablet version
+- focus states on iputs onClick, the same with percent buttons
+- reset button styling in JS
+- checking for right values, error messages
 
 ### Useful resources
 
-- [Modern CSS](https://moderncss.dev/pure-css-custom-styled-radio-buttons/) - This helped me with styling the radio buttons
 - [W3schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) - This helped me to make the arrows in numeric inputs invisible
 
 ## Author
