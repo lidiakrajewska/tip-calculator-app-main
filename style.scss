@@ -6,6 +6,7 @@ $grayish: hsl(184, 14%, 56%);
 $lighter: hsl(185, 41%, 84%);
 $lightest: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
+$hover: hsl(174, 58%, 75%);
 
 *,
 *:before,
@@ -86,6 +87,7 @@ body {
     margin: 0;
   }
   -moz-appearance: textfield;
+  cursor: pointer;
 }
 
 .radio-wrapper {
@@ -102,22 +104,16 @@ body {
   color: $white;
   text-align: center;
   border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: $hover;
+    color: $darkest;
+  }
 }
 
 .radio-item--custom {
   background-color: $lightest;
   color: $dark;
-}
-
-.input--radio {
-  appearance: none;
-  /* For iOS < 15 to remove gradient background */
-  background-color: #fff;
-  /* Not removed via appearance */
-  margin: 0;
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .active {
@@ -169,6 +165,11 @@ body {
   opacity: 0.2;
   border: none;
   border-radius: 5px;
+  &:hover {
+    background-color: $hover;
+    color: $darkest;
+    opacity: 1;
+  }
 }
 
 // Footer
